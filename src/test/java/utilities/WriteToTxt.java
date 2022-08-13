@@ -6,6 +6,7 @@ import pojos.US25_appointment;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.util.List;
 
 public class WriteToTxt {
@@ -138,6 +139,25 @@ public class WriteToTxt {
 
 
     }
+
+    public static void saveAppointmentIds(String fileName, List<Object> id){
+        try {
+            BufferedWriter writer=new BufferedWriter(new FileWriter(fileName,false));
+
+            for (int i = 0; i < id.size(); i++) {
+
+                writer.append(id.get(i).toString()+", ");
+
+
+
+            }
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 
 
 }

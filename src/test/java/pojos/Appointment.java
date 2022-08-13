@@ -84,4 +84,6 @@ public class Appointment {
                 ", date='" + date + '\'' +
                 '}';
     }
+
+
 }
