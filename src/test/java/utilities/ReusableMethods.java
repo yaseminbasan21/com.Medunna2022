@@ -243,6 +243,20 @@ public class ReusableMethods {
             // 2030-01-01  yıl ay gun olmalı
 
         }
+    public static String stringDateFormat2 (String date)
+    {
+        String day = date.substring(0, 2);
+        String month = date.substring(3, 5);
+        String year = date.substring(6);
+
+        String formatDateString = year + "-" + day + "-" + month;
+
+        return formatDateString;
+
+        // buraya gelen  gun ay yil gg.aa.yyyy
+        // 2030-01-01  yıl ay gun olmalı
+
+    }
     public static void hooverByJS(WebElement element) {
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         jse.executeScript("arguments[0].scrollIntoView()", element);
