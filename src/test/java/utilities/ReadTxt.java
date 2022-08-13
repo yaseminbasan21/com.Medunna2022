@@ -148,11 +148,11 @@ public class ReadTxt {
             int i=0;
             while (line != null) {
                 US007_Appointment appointment=new US007_Appointment();
-                appointment.setId(Integer.parseInt((line.split(",")[i])));
+                appointment.setId(Integer.parseInt((line.split(",")[0])));
                 sb.append(System.lineSeparator());
                 line=br.readLine();
                 all.add(appointment.getId());
-                i++;
+
             }
 
 
