@@ -163,6 +163,7 @@ public class ReadTxt {
         return all;
     }
 
+
     public static List<Object> returnAppointmentStatusList(String filePath) {
 
         List<Object> all = new ArrayList<>();
