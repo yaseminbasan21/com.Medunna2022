@@ -35,7 +35,7 @@ public class US011_page {
     @FindBy(linkText = "MY PAGES")
     public WebElement giris;
 
-    @FindBy(xpath = "//*[@id=\"login-item\"]/span")
+    @FindBy(xpath = "//*[@id='login-item']/span")
     public WebElement Sing_in;
 
     @FindBy(xpath = "//input[@id='username']")
@@ -80,9 +80,8 @@ public class US011_page {
     public WebElement cancelled;
     @FindBy (xpath = "//*[@name='status']")
     public WebElement statusDropDown;
-    @FindBy (xpath = "//*[@id='save-entity']")
-    //*[@id="save-entity"]/span
-    public WebElement saveButonu;
+    @FindBy (xpath = "//button[@id='save-entity']")
+    public WebElement ransaveButonu;
     @FindBy (xpath = "//*[@name='status']")
     public WebElement statusDhropDown;
     @FindBy (xpath = "//*[@name='status']")

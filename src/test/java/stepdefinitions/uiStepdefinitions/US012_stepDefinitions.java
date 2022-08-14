@@ -10,8 +10,9 @@ public class US012_stepDefinitions {
 
     US011_page us011Page = new US011_page();
     @Given("Doktor Medunna url'sine gider")
-    public void doktor_medunna_url_sine_gider() {
-        Driver.getDriver().get(ConfigReader.getProperty("hmedunnaUrl"));
+    public void doktor_medunna_url_sine_gider() throws InterruptedException {
+        Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
+        Thread.sleep(7777);
 
     }
     @Given("Doktor giriş yapar")
