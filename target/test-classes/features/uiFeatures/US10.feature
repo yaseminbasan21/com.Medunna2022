@@ -1,7 +1,7 @@
+@us10
+Feature:US010_Kullanıcı, randevu listesini ve zaman dilimlerini "My Appointments" sekmesinden görebilmelidir.
 
-Feature: US010_Kullanıcı, randevu listesini ve zaman dilimlerini "My Appointments" sekmesinden görebilmelidir.
-
-     @us1001, @smoke
+     @us1002, @smoke
     Scenario: TC01_Kullanıcı,randevu listesini ve zaman dilimlerini "My Appointments" sekmesinden görebilmelidir.
       Given "medunnaUrl" e gidilir.
       Then Sign in butonu tiklanir.
