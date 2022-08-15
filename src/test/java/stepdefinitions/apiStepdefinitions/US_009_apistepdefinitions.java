@@ -1,4 +1,4 @@
-package stepdefinitions;
+package stepdefinitions.apiStepdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -11,10 +11,9 @@ import pojos.Patient;
 import utilities.ConfigReader;
 
 import static io.restassured.RestAssured.given;
-import static utilities.AuthenticationYeni.generateToken;
+import static utilities.AuthenticationUS15.generateToken;
 
-public class US_009API_stepdefinitions {
-
+public class US_009_apistepdefinitions {
     Response response;
     Patient patient;
     public static RequestSpecification spec;
@@ -53,4 +52,5 @@ public class US_009API_stepdefinitions {
 
         Assert.assertEquals(154140,patient.getId());
     }
+
 }

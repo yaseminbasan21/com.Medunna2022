@@ -1,4 +1,4 @@
-package stepdefinitions;
+package stepdefinitions.dbStepdefinitions;
 
 import io.cucumber.java.en.Then;
 
