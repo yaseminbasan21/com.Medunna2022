@@ -1,6 +1,9 @@
 package utilities;
 
+
+import pojos.Appointment;
 import pojos.Registrant;
+import pojos.US007_Appointment;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -129,4 +132,104 @@ public class ReadTxt {
 
         return list;
     }
+
+    // tugba
+    public static List<Object> returnAppointmentIdsList(String filePath){
+        List<Object>all = new ArrayList<>();
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+            System.out.println(line);
+            int i = 0;
+            while (line != null) {
+                US007_Appointment appointment=new US007_Appointment();
+                appointment.setId(Integer.parseInt(line.split(",")[0]));
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+
+//                System.out.println(i++);
+
+                all.add(appointment.getId());
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return all;
+    }
+
+    //tugba
+    public static List<Object> returnAppointmentStatusList(String filePath){
+        List<Object>all = new ArrayList<>();
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+            System.out.println(line);
+            int i = 0;
+            while (line != null) {
+                US007_Appointment appointment=new US007_Appointment();
+                appointment.setStatus(line.split(",")[0]);
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+
+//                System.out.println(i++);
+
+                all.add(appointment.getStatus());
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return all;
+    }
+    // tugba
+    public static List<Object> returnAppointmentStartDateList(String filePath){
+        List<Object>all = new ArrayList<>();
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+            System.out.println(line);
+            int i = 0;
+            while (line != null) {
+                US007_Appointment appointment=new US007_Appointment();
+                appointment.setStartDate(line.split(",")[0]);
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+
+//                System.out.println(i++);
+
+                all.add(appointment.getStartDate());
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return all;
+    }
+    //tugba
+    public static List<Object> returnAppointmentEndDateList(String filePath){
+        List<Object>all = new ArrayList<>();
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+            System.out.println(line);
+            int i = 0;
+            while (line != null) {
+                US007_Appointment appointment=new US007_Appointment();
+                appointment.setEndDate(line.split(",")[0]);
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+
+//                System.out.println(i++);
+
+                all.add(appointment.getEndDate());
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return all;
+    }
+
+
+
+
+
+
 }

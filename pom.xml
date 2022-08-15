@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>com.medunna</artifactId>
+    <artifactId>com.medunna_2022</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -14,10 +13,7 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
-
-
     <dependencies>
-
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -32,21 +28,20 @@
             <version>5.0.3</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
         <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-java</artifactId>
-            <version>7.2.3</version>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>5.2.2</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
         <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-junit</artifactId>
-            <version>7.2.3</version>
-            <scope>test</scope>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.2.2</version>
         </dependency>
-
+        <!--        a library to generate fake data when needed-->
         <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
         <dependency>
             <groupId>com.github.javafaker</groupId>
@@ -54,41 +49,29 @@
             <version>1.0.2</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
         <dependency>
-            <groupId>junit</groupId> <!-- Hard assert basta olmak uzere test methodlari icin simple kutuphaneler icerir-->
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.2.3</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.2.3</version>
             <scope>test</scope>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
         <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-            <version>5.2.0</version>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>4.3.0</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
-            <version>5.2.0</version>
-        </dependency>
-
         <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-compress -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-compress</artifactId>
             <version>1.20</version>
-        </dependency>
-
-
-
-        <dependency>
-            <groupId>com.aventstack</groupId>
-            <artifactId>extentreports</artifactId>
-            <version>4.0.9</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.itextpdf/itextpdf -->
@@ -97,87 +80,45 @@
             <artifactId>itextpdf</artifactId>
             <version>5.4.2</version>
         </dependency>
-
-        <!--
-
-          <dependency>
-              <groupId>com.fasterxml.jackson.core</groupId>
-              <artifactId>jackson-databind</artifactId>
-              <version>2.13.1</version>
-          </dependency>
-          -->
-
-
-        <!-- Buradan asagida kalan kisim api icin -->
-
         <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>rest-assured</artifactId>
-            <version>4.3.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.rest-assured</groupId> <!-- Temel API Test kutuphanelerini icerir -->
-            <artifactId>rest-assured</artifactId>
-            <version>4.5.1</version>
-            <scope>test</scope>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.8</version>
         </dependency>
 
 
-        <!-- https://mvnrepository.com/artifact/org.json/json -->
-        <dependency>
-            <groupId>org.json</groupId> <!-- Json objenin icinde gezebilmemizi saglayan jsonPath ile test case'den gelen datayi icine koymaya yarayan JSONObject buradan gelir-->
-            <artifactId>json</artifactId>
-            <version>20211205</version>
-        </dependency>
+        <!--        &lt;!&ndash; https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter &ndash;&gt;-->
+        <!--        <dependency>-->
+        <!--            <groupId>tech.grasshopper</groupId>-->
+        <!--            <artifactId>extentreports-cucumber7-adapter</artifactId>-->
+        <!--            <version>1.2.0</version>-->
+        <!--        </dependency>-->
 
-        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
-
-
-        <dependency>
-            <groupId>com.google.code.gson</groupId> <!-- GSON ile De-Serialization, Serialization yapmayi saglar-->
-            <artifactId>gson</artifactId>
-            <version>2.9.0</version>
-        </dependency>
-        <!-- GSON ile Object Mapper ayni isi yapar, birbirinin alternatifidir, bbirini bbilmen ve interview'de anlatman yeterlidir-->
-        <dependency>
-            <groupId>org.codehaus.jackson</groupId>  <!-- Object Mapper ile De-Serialization, Serialization yapmayi saglar-->
-            <artifactId>jackson-mapper-asl</artifactId>
-            <version>1.9.13</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-core-asl</artifactId>
-            <version>1.9.13</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>RELEASE</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- Buradan asagida kalan kisim db icin -->
-
-        <dependency>
-            <groupId>com.microsoft.sqlserver</groupId>
-            <artifactId>mssql-jdbc</artifactId>
-            <version>8.2.2.jre8</version>
-        </dependency>
 
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>42.2.8</version>
         </dependency>
-
-
-
-
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20211205</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.5</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
-
 
     <build>
         <plugins>
@@ -189,11 +130,10 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <skipTests>false</skipTests>
                     <includes>
-                        <include>**/runners/*TestRunner*.java</include> <!-- bunu iz elimmizle kendimmize gore duzeltiyoruz, case sensitive'dir-->
+                        <include>**/runners/*TestRunner*.java</include>
                     </includes>
                 </configuration>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -209,12 +149,11 @@
                     <argLine>-Dfile.encoding=UTF-8</argLine>
                     <useFile>false</useFile>
                     <includes>
-                        <include>**/runners/*TestRunner*.java</include> <!-- burada degisiklik yapılacak -->
+                        <include>**/runners/*TestRunner*.java</include>
                     </includes>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
-
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
@@ -227,11 +166,12 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>cucumber-jvm-example</projectName>
+                            <projectName>cucumber-framework</projectName>
                             <outputDirectory>${project.build.directory}</outputDirectory>
+                            <!--                            <cucumberOutput>${project.build.directory}</cucumberOutput>-->
                             <inputDirectory>${project.build.directory}</inputDirectory>
                             <jsonFiles>
-                                <param>**/json-reports/*.json</param> <!-- burada degisiklik yapılacak -->
+                                <param>**/json-reports/*.json</param>
                             </jsonFiles><classificationFiles>->
                             <param>sample.properties</param>
                             <param>other.properties</param>
@@ -240,8 +180,8 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
+
 
 </project>

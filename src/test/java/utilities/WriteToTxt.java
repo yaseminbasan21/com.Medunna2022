@@ -1,11 +1,13 @@
 package utilities;
 
+import com.google.gson.Gson;
 import pojos.Appointment;
 import pojos.Registrant;
 import pojos.US25_appointment;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.util.List;
 
 public class WriteToTxt {
@@ -138,6 +140,69 @@ public class WriteToTxt {
 
 
     }
+
+    //tugba
+
+    public static void saveAppointmentIds(String fileName, List<Object> id) {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName,false));
+            for (int i = 0; i < id.size(); i++)
+                writer.append(id.get(i).toString()+",\n");
+
+
+            writer.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    //tugba
+    public static void saveAppointmentStatus(String fileName, List<Object> id) {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName,false));
+            for (int i = 0; i < id.size(); i++)
+                writer.append(id.get(i).toString()+",\n");
+
+
+            writer.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    //tugba
+    public static void saveAppointmentStartDate(String fileName, List<Object> id) {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName,false));
+            for (int i = 0; i < id.size(); i++)
+                writer.append(id.get(i).toString()+",\n");
+
+
+            writer.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    //tugba
+    public static void saveAppointmentEndDate(String fileName, List<Object> id) {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName,false));
+            for (int i = 0; i < id.size(); i++)
+                writer.append(id.get(i).toString()+",\n");
+
+
+            writer.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
 
 
 }

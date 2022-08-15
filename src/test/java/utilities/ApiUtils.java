@@ -55,5 +55,20 @@ public class ApiUtils {
 
     }
 
+    public static Response postRequest(String token, String endpoint, Registrant registrant){
+
+        Response response = given().headers(
+                "Authorization",
+                "Bearer " + AuthenticationYeni.generateToken(),
+                "Content-Type",
+                ContentType.JSON,
+                "Accept",
+                ContentType.JSON).contentType(ContentType.JSON).body(registrant).when().post(endpoint);
+
+
+        return  response;
+
+    }
+
 
 }

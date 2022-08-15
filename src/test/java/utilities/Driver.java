@@ -21,7 +21,7 @@ public class Driver
     private Driver(){} // default constructor'i oldurmek icin kendim parametresiz constructor yazdim
     // ve de kimse buna erisemesin, dolayisiyla da obje uretemesin diye access modifier'ini private yaptik
     // artik kimmse Drievr class'indan obje uretemez !!!!!
-    private static WebDriver driver; // public yapmazsak diger package'lar csagiramaz
+    public static WebDriver driver; // public yapmazsak diger package'lar csagiramaz
     private static int timeout = 5;
     public static WebDriver getDriver(){ // return type WeDriver, cunku ben bu methodun bana driver vermesini istiyorum
         if(driver == null){
@@ -33,10 +33,6 @@ public class Driver
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
-                    break;
-                case "opera":
-                    WebDriverManager.operadriver().setup();
-                    driver = new OperaDriver();
                     break;
                 case "safari":
                     WebDriverManager.safaridriver().setup();
