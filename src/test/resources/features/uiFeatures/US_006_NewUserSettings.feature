@@ -15,7 +15,7 @@ Feature: US_006 Kullanıcı ayarları düzenlenebilir olmalıdır
     And Sayfayı kapatır
 
 
-    @US_006_2_pozitifTest
+  @US_006_2_pozitifTest
   Scenario Outline:Kullanıcı güncelleme yapabilmelidir
     Then Firstname kutusu görüntülenmeli ve "<firstname>" olarak güncellenmelidir
     Then Lastname kutusu görüntülenmeli ve "<lastname>" olarak güncellenmelidir.
@@ -25,10 +25,10 @@ Feature: US_006 Kullanıcı ayarları düzenlenebilir olmalıdır
     And Sayfayı kapatır
 
     Examples:
-      |firstname|lastname|email              |
-      |mete     |kaya    |mete000@gmail.com  |
-      |mete     |basan   |mete00@gmail.com   |
-      |elif     |yazar   |elifyazar@gmail.com|
+      | firstname | lastname | email               |
+      | mete      | kaya     | mete000@gmail.com   |
+      | mete      | basan    | mete00@gmail.com    |
+      | elif      | yazar    | elifyazar@gmail.com |
 
   @US_006_3_negatifTest
   Scenario:Kullanıcı geçerli bilgileri girmeden güncelleme yapamamalıdır
@@ -48,7 +48,7 @@ Feature: US_006 Kullanıcı ayarları düzenlenebilir olmalıdır
     And Sayfayı kapatır
 
     Examples:
-      |email       |
-      |mete        |
-      |mete00      |
-      |mete00@gmail|
+      | email        |
+      | mete         |
+      | mete00       |
+      | mete00@gmail |
