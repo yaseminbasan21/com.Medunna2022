@@ -43,9 +43,8 @@ public class US007_dbStepDefinitions {
 
             List<Object> actualAppointmentId = ReadTxt.returnAppointmentIdsList(fileName1);
             List<Object> expectedAppointmentId = new ArrayList<>();
-            expectedAppointmentId.add(3403);
             expectedAppointmentId.add(8810);
-            //   expectedAppointmentId.add(8805);
+            expectedAppointmentId.add(8805);
 
             System.out.println(expectedAppointmentId);
             System.out.println(actualAppointmentId);

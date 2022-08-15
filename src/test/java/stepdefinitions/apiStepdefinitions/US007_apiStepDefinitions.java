@@ -80,6 +80,7 @@ public class US007_apiStepDefinitions {
 
     @Then("Medunna Api Endpointinden Randevulari Goruntuleme Isleminin Status Codeunun {int} Oldugunu Dogrular")
     public void medunnaApiEndpointindenRandevulariGoruntulemeIslemininStatusCodeununOldugunuDogrular(int statusKod) {
+
         response.then().assertThat().statusCode(statusKod);
     }
 

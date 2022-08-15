@@ -1,5 +1,6 @@
 package utilities;
 
+import com.google.gson.Gson;
 import pojos.Appointment;
 import pojos.Registrant;
 import pojos.US25_appointment;
@@ -140,19 +141,63 @@ public class WriteToTxt {
 
     }
 
-    public static void saveAppointmentIds(String fileName, List<Object> id){
+    //tugba
+
+    public static void saveAppointmentIds(String fileName, List<Object> id) {
         try {
-            BufferedWriter writer=new BufferedWriter(new FileWriter(fileName,false));
-
-            for (int i = 0; i < id.size(); i++) {
-
-                writer.append(id.get(i).toString()+", ");
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName,false));
+            for (int i = 0; i < id.size(); i++)
+                writer.append(id.get(i).toString()+",\n");
 
 
-
-            }
             writer.close();
-        } catch (IOException e) {
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    //tugba
+    public static void saveAppointmentStatus(String fileName, List<Object> id) {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName,false));
+            for (int i = 0; i < id.size(); i++)
+                writer.append(id.get(i).toString()+",\n");
+
+
+            writer.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    //tugba
+    public static void saveAppointmentStartDate(String fileName, List<Object> id) {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName,false));
+            for (int i = 0; i < id.size(); i++)
+                writer.append(id.get(i).toString()+",\n");
+
+
+            writer.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    //tugba
+    public static void saveAppointmentEndDate(String fileName, List<Object> id) {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName,false));
+            for (int i = 0; i < id.size(); i++)
+                writer.append(id.get(i).toString()+",\n");
+
+
+            writer.close();
+
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
