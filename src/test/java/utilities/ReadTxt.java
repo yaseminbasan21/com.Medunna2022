@@ -1,6 +1,7 @@
 package utilities;
 
 
+import pojos.Appointment;
 import pojos.Registrant;
 import pojos.US007_Appointment;
 
@@ -132,122 +133,97 @@ public class ReadTxt {
         return list;
     }
 
-
-    public static List<Object> returnAppointmentIdsList(String filePath) {
-        List<Object> all = new ArrayList<>();
-        try {
-            //identify file location
-            FileReader fileReader = new FileReader(filePath);
-
-            //Read the records of the file in given location
-            BufferedReader br = new BufferedReader(fileReader);
-            StringBuilder sb=new StringBuilder();
-            String line = br.readLine();//856-45-6789,
+    // tugba
+    public static List<Object> returnAppointmentIdsList(String filePath){
+        List<Object>all = new ArrayList<>();
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
             System.out.println(line);
-
-            int i=0;
+            int i = 0;
             while (line != null) {
                 US007_Appointment appointment=new US007_Appointment();
-                appointment.setId(Integer.parseInt((line.split(",")[0])));
+                appointment.setId(Integer.parseInt(line.split(",")[0]));
                 sb.append(System.lineSeparator());
-                line=br.readLine();
+                line = br.readLine();
+
+//                System.out.println(i++);
+
                 all.add(appointment.getId());
-
             }
-
-
-        } catch (Exception e) {
+        }catch (Exception e){
             e.printStackTrace();
-
         }
         return all;
     }
 
-    public static List<Object> returnAppointmentStatusList(String filePath) {
-
-        List<Object> all = new ArrayList<>();
-
-        try {
-            //identify file location
-            FileReader fileReader = new FileReader(filePath);
-
-            //Read the records of the file in given location
-            BufferedReader br = new BufferedReader(fileReader);
-            StringBuilder sb=new StringBuilder();
-            String line = br.readLine();//856-45-6789,
+    //tugba
+    public static List<Object> returnAppointmentStatusList(String filePath){
+        List<Object>all = new ArrayList<>();
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
             System.out.println(line);
-
-            int i=0;
+            int i = 0;
             while (line != null) {
                 US007_Appointment appointment=new US007_Appointment();
                 appointment.setStatus(line.split(",")[0]);
                 sb.append(System.lineSeparator());
-                line=br.readLine();
-                all.add(appointment.getStatus());
+                line = br.readLine();
 
+//                System.out.println(i++);
+
+                all.add(appointment.getStatus());
             }
-        } catch (Exception e) {
+        }catch (Exception e){
             e.printStackTrace();
         }
-
         return all;
     }
-    public static List<Object> returnAppointmentStartDateList(String filePath) {
-
-        List<Object> all = new ArrayList<>();
-
-        try {
-            //identify file location
-            FileReader fileReader = new FileReader(filePath);
-
-            //Read the records of the file in given location
-            BufferedReader br = new BufferedReader(fileReader);
-            StringBuilder sb=new StringBuilder();
-            String line = br.readLine();//856-45-6789,
+    // tugba
+    public static List<Object> returnAppointmentStartDateList(String filePath){
+        List<Object>all = new ArrayList<>();
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
             System.out.println(line);
-
-            int i=0;
+            int i = 0;
             while (line != null) {
                 US007_Appointment appointment=new US007_Appointment();
                 appointment.setStartDate(line.split(",")[0]);
                 sb.append(System.lineSeparator());
-                line=br.readLine();
-                all.add(appointment.getStartDate());
+                line = br.readLine();
 
+//                System.out.println(i++);
+
+                all.add(appointment.getStartDate());
             }
-        } catch (Exception e) {
+        }catch (Exception e){
             e.printStackTrace();
         }
-
         return all;
     }
-    public static List<Object> returnAppointmentEndDateList(String filePath) {
-
-        List<Object> all = new ArrayList<>();
-
-        try {
-            //identify file location
-            FileReader fileReader = new FileReader(filePath);
-
-            //Read the records of the file in given location
-            BufferedReader br = new BufferedReader(fileReader);
-            StringBuilder sb=new StringBuilder();
-            String line = br.readLine();//856-45-6789,
+    //tugba
+    public static List<Object> returnAppointmentEndDateList(String filePath){
+        List<Object>all = new ArrayList<>();
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
             System.out.println(line);
-
-            int i=0;
+            int i = 0;
             while (line != null) {
                 US007_Appointment appointment=new US007_Appointment();
                 appointment.setEndDate(line.split(",")[0]);
                 sb.append(System.lineSeparator());
-                line=br.readLine();
-                all.add(appointment.getEndDate());
+                line = br.readLine();
 
+//                System.out.println(i++);
+
+                all.add(appointment.getEndDate());
             }
-        } catch (Exception e) {
+        }catch (Exception e){
             e.printStackTrace();
         }
-
         return all;
     }
 

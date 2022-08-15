@@ -1,7 +1,7 @@
 
 Feature: US010_Kullanıcı, randevu listesini ve zaman dilimlerini "My Appointments" sekmesinden görebilmelidir.
 
-     @us10
+     @us1001, @smoke
     Scenario: TC01_Kullanıcı,randevu listesini ve zaman dilimlerini "My Appointments" sekmesinden görebilmelidir.
       Given "medunnaUrl" e gidilir.
       Then Sign in butonu tiklanir.
@@ -14,6 +14,7 @@ Feature: US010_Kullanıcı, randevu listesini ve zaman dilimlerini "My Appointme
       And Acilan sayfada randevu listesi ve zaman dilimlerinin gorunur oldugu test edilir.
       And Sayfa kapatilir.
 
+    @us1002, @smoke
     Scenario: TC02_Kullanıcı "patient id, start date, end date, status" bilgilerini görebilmeli
       Given "medunnaUrl" e gidilir.
       Then Sign in butonu tiklanir.

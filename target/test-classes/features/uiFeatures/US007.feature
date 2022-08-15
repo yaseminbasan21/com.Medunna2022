@@ -1,5 +1,6 @@
 Feature:US007_Hastalar randevu tarihi oluşturabilmelidir
 
+  @us0701, @smoke
   Scenario:TC01_Kullanıcı geçerli tarih girmelidir. (güncel tarihi veya gelecekteki tarihleri seçebilmelidir)
     Given "medunnaUrl" e gidilir.
     Then Sign in butonu tiklanir.
@@ -16,6 +17,7 @@ Feature:US007_Hastalar randevu tarihi oluşturabilmelidir
     And Randevunun basarili bir sekilde kaydedildigini cikan popup ile dogrular.
     And Sayfa kapatilir.
 
+  @us0702, @smoke
     Scenario: TC02_Kullanici date alani icin gecmis tarih girdiginde randevu olusturulmamalidir.
       Given "medunnaUrl" e gidilir.
       Then Sign in butonu tiklanir.
@@ -30,6 +32,7 @@ Feature:US007_Hastalar randevu tarihi oluşturabilmelidir
       And Date textboxinin altinda Appointment date can not be past date! uyarisinin gorundugunu dogrular.
       And Send an Appointment Request butonuna basildiginda kayit yapilmadigi gorulur.
 
+  @us0703, @smoke
     Scenario: TC03_Kullanici date alani icin ileri tarihli bir deger girdiginde randevu olusturulmalidir
       Given "medunnaUrl" e gidilir.
       Then Sign in butonu tiklanir.
@@ -43,6 +46,7 @@ Feature:US007_Hastalar randevu tarihi oluşturabilmelidir
       And Date textbox'ini ileri bir tarih ile doldurur.
       And Send an Appointment Request butonuna basildiginda Appointment registration saved yazisi gorulmeli.
 
+  @us0704, @smoke
     Scenario Outline: TC04_Tarih sırası gün/ay/yıl (ay/gün/yıl) şeklinde olmalıdır.
       Given "medunnaUrl" e gidilir.
       Then Sign in butonu tiklanir.

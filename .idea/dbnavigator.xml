@@ -31,7 +31,7 @@
     <connection id="48631f2f-a381-4da6-a635-6b0d46c560dc">
       <console name="Medunna" type="STANDARD" schema="information_schema" session="Main"><![CDATA[select id from "public".appointment
 
-select * from "public".appointment where id=3403
+select * from "public".appointment where id=157538
 
 select * from "public".appointment where id=166158]]></console>
     </connection>
