@@ -2,7 +2,6 @@ package stepdefinitions.apiStepdefinitions;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
-import hooks.Hooks;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -11,12 +10,8 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Assert;
-import org.junit.Test;
-import pojos.Appointment;
 import pojos.US007_Appointment;
 import pojos.US007_AppointmentRequest;
-import pojos.User;
-import utilities.AuthenticationYeni;
 import utilities.ConfigReader;
 
 import java.io.IOException;
