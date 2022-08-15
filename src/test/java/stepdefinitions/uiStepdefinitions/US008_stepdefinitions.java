@@ -141,4 +141,5 @@ public class US008_stepdefinitions {
         us008_page.confirmPasswordKutusu.sendKeys(ConfigReader.getProperty("eskiPassword"));
         Thread.sleep(2000);
     }
+    //test
 }
