@@ -1,32 +1,82 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="48.834">
-    <testcase classname="US010_Kullanıcı, randevu listesini ve zaman dilimlerini &quot;My Appointments&quot; sekmesinden görebilmelidir." name="TC01_Kullanıcı,randevu listesini ve zaman dilimlerini &quot;My Appointments&quot; sekmesinden görebilmelidir." time="24.543">
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="55.324">
+    <testcase classname="Admin olarak; Yeni Staff (Personel) Oluşturma / Güncelleme / Görüntüleme ve Silme" name="TC05_API kullanarak staff listasi goruntulenebilmeli" time="3.64">
+        <failure message="Cannot deserialize instance of `pojos.US019_Staff` out of START_ARRAY token&#10; at [Source: (String)&quot;[&#10;    {&#10;        &quot;createdBy&quot;: &quot;team52&quot;,&#10;        &quot;createdDate&quot;: &quot;2022-08-30T10:56:29.395725Z&quot;,&#10;        &quot;id&quot;: 245983,&#10;        &quot;firstName&quot;: &quot;firstname52&quot;,&#10;        &quot;lastName&quot;: &quot;lastname52&quot;,&#10;        &quot;birthDate&quot;: &quot;2001-02-01T01:04:00Z&quot;,&#10;        &quot;phone&quot;: &quot;555-001-5555&quot;,&#10;        &quot;gender&quot;: &quot;FEMALE&quot;,&#10;        &quot;bloodGroup&quot;: &quot;Apositive&quot;,&#10;        &quot;adress&quot;: &quot;ayyildiz1&quot;,&#10;        &quot;description&quot;: &quot;aciklama1&quot;,&#10;        &quot;user&quot;: {&#10;            &quot;createdBy&quot;: &quot;team52&quot;,&#10;            &quot;createdDate&quot;: &quot;2022-08-28T12:14:04.789687&quot;[truncated 14423 chars]; line: 1, column: 1]" type="com.fasterxml.jackson.databind.exc.MismatchedInputException">
+            <![CDATA[Given Medunna Api Endpointinden staffleri goruntuler........................passed
+Then Medunna Api Endpointinden staffleri goruntuleme Isleminin Status Codeunun 200 Oldugunu Dogrular.passed
+And Medunna Api Endpointinden id numarali mesaji Okur ve mesajin "firstname52", "lastname52" ve "555-001-5555" bilgilerine sahip oldugunu dogrular..failed
+
+StackTrace:
+com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `pojos.US019_Staff` out of START_ARRAY token
+ at [Source: (String)"[
+    {
+        "createdBy": "team52",
+        "createdDate": "2022-08-30T10:56:29.395725Z",
+        "id": 245983,
+        "firstName": "firstname52",
+        "lastName": "lastname52",
+        "birthDate": "2001-02-01T01:04:00Z",
+        "phone": "555-001-5555",
+        "gender": "FEMALE",
+        "bloodGroup": "Apositive",
+        "adress": "ayyildiz1",
+        "description": "aciklama1",
+        "user": {
+            "createdBy": "team52",
+            "createdDate": "2022-08-28T12:14:04.789687"[truncated 14423 chars]; line: 1, column: 1]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:63)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1343)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1139)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1093)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromArray(BeanDeserializerBase.java:1461)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:185)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:161)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4013)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3004)
+	at stepdefinitions.apiStepdefinitions.US019_apiStepdefinitions.medunnaApiEndpointindenIdNumaraliMesajiOkurVeMesajinVeBilgilerineSahipOldugunuDogrular(US019_apiStepdefinitions.java:50)
+	at ✽.Medunna Api Endpointinden id numarali mesaji Okur ve mesajin "firstname52", "lastname52" ve "555-001-5555" bilgilerine sahip oldugunu dogrular.(file:///C:/Users/Asus/IdeaProjects/com.medunna2022/src/test/resources/features/apiFeatures/US019.feature:7)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="US019_db Admin olarak; Yeni Staff (Personel) Oluşturma / Güncelleme / Görüntüleme ve Silme" name="Kullanici admin olarak staff bilgilerini db olarak dogrulayabilmeli" time="1.699">
         <system-out>
-            <![CDATA[Given "medunnaUrl" e gidilir................................................passed
-Then Sign in butonu tiklanir................................................passed
-And Kullanici kayitli oldugu "DoktorUserName" i girmelidir..................passed
-And Kullanici kayitli "DoktorPassword" u girmelidir.........................passed
-And SignIn butonu tiklanir..................................................passed
-And Acilan sayfada girilen kullanici isminin gorunur oldugu test edilir.....passed
-And MY PAGES butonuna tiklar ve menuden My Appointment secenegini tiklar....passed
-And Acilan sayfada Appointments yazisinin gorunur oldugu test edilir........passed
-And Acilan sayfada randevu listesi ve zaman dilimlerinin gorunur oldugu test edilir..passed
-And Sayfa kapatilir.........................................................passed
+            <![CDATA[Given Kullanici database ile medunnaya baglanir.............................passed
+When staff datalarina erisir................................................passed
+And kullanici database den gelen bilgileri dogrular.........................passed
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="US010_Kullanıcı, randevu listesini ve zaman dilimlerini &quot;My Appointments&quot; sekmesinden görebilmelidir." name="TC02_Kullanıcı &quot;patient id, start date, end date, status&quot; bilgilerini görebilmeli" time="24.043">
+    <testcase classname="US_019 Admin olarak; Yeni Staff (Personel) Oluşturma / Güncelleme / Görüntüleme ve Silme" name="TC_001 Admin SSN kullanarak; kayıtlı kişiler arasında Staff arayabilir." time="11.731">
         <system-out>
-            <![CDATA[Given "medunnaUrl" e gidilir................................................passed
-Then Sign in butonu tiklanir................................................passed
-Given Kullanici kayitli oldugu "DoktorUserName" i girmelidir................passed
-And Kullanici kayitli "DoktorPassword" u girmelidir.........................passed
-And SignIn butonu tiklanir..................................................passed
-And Acilan sayfada girilen kullanici isminin gorunur oldugu test edilir.....passed
-And MY PAGES butonuna tiklar ve menuden My Appointment secenegini tiklar....passed
-And Acilan sayfada Appointments yazisinin gorunur oldugu test edilir........passed
-And Acilan sayfada patient id, start date, end date ve status bilgilerinin gorunur oldugu test edilir..passed
-And Sayfa kapatilir.........................................................passed
+            <![CDATA[Given kullanici medunna anasayfasinda.......................................passed
+When kullanici giris ikonuna tiklar.........................................passed
+And kullanici Signin'a tiklar...............................................passed
+And kullanici "admin" olarak gecerli bir username ve "adminPassword" password girer.passed
+And kullanici admin olarak itemsTitles a tiklar.............................passed
+And kullanici admin olarak acilan DDM den Staff a tiklar....................passed
+And kullanici admin olarak Create a new Staff butonuna tiklar...............passed
+And kullanici admin olarak Use Search kutucugunu isaretleyip SSN kutusuna cagiracagi staff in SSN numarasini girer.passed
+Then kullanici admin olarak Search User butonuna tiklar.....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US_019 Admin olarak; Yeni Staff (Personel) Oluşturma / Güncelleme / Görüntüleme ve Silme" name="Tüm bilgileri doldurulmalıdır" time="15.274">
+        <system-out>
+            <![CDATA[Given kullanici admin olarak guncellemek istedigi bilgileri ilgili kutulara doldurur.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US_019 Admin olarak; Yeni Staff (Personel) Oluşturma / Güncelleme / Görüntüleme ve Silme" name="TC_002 Admin kayıtlı kişilerden bir kullanıcı seçebilir." time="13.816">
+        <system-out>
+            <![CDATA[Given kullanici admin olarak bilgilerini duzenlemek istedigi Staff in uzerine gelip edit i tiklar.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US_019 Admin olarak; Yeni Staff (Personel) Oluşturma / Güncelleme / Görüntüleme ve Silme" name="TC_004 Admin, personeli silebilmeli." time="8.808">
+        <system-out>
+            <![CDATA[Given kullanici admin olarak bilgilerini silmek istedigi Staff in uzerine gelip Delete ye tiklar.passed
+When kullanici admin olarak Confirm delete operation dan tekrar Delete ye tiklar.passed
+And kullanici sayfayi kapatir...............................................passed
 ]]>
         </system-out>
     </testcase>
