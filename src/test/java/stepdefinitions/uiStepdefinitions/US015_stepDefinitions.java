@@ -3,11 +3,15 @@ package stepdefinitions.uiStepdefinitions;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import pages.US015_page;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+
+import java.util.List;
+import java.util.Random;
 
 public class US015_stepDefinitions {
 
@@ -59,15 +63,15 @@ public class US015_stepDefinitions {
         Driver.waitAndSendText(us015_page.emailBox,faker.internet().emailAddress());
         Driver.waitAndSendText(us015_page.phoneBox,faker.number().digits(10));
         Select select=new Select(us015_page.genderBox);
-        ReusableMethods.selectRandomTextFromDropdown(select);
+        US015_stepDefinitions.selectRandomTextFromDropdown(select);
         ReusableMethods.waitFor(3);
         select = new Select(us015_page.bloodGroupBox);
-        ReusableMethods.selectRandomTextFromDropdown(select);
+        US015_stepDefinitions.selectRandomTextFromDropdown(select);
         ReusableMethods.waitFor(3);
         Driver.waitAndSendText(us015_page.addressBox,faker.address().streetAddress());
         Driver.waitAndSendText(us015_page.descriptionBox,faker.lorem().word());
         select=new Select(us015_page.userBox);
-        ReusableMethods.selectRandomTextFromDropdown(select);
+        US015_stepDefinitions.selectRandomTextFromDropdown(select);
         ReusableMethods.waitFor(3);
         select=new Select(us015_page.countryBox);
         select.selectByVisibleText("USA");
@@ -157,15 +161,15 @@ public class US015_stepDefinitions {
         Driver.waitAndSendText(us015_page.emailBox,faker.internet().emailAddress());
         Driver.waitAndSendText(us015_page.phoneBox,faker.number().digits(10));
         Select select=new Select(us015_page.genderBox);
-        ReusableMethods.selectRandomTextFromDropdown(select);
+        US015_stepDefinitions.selectRandomTextFromDropdown(select);
         ReusableMethods.waitFor(3);
         select = new Select(us015_page.bloodGroupBox);
-        ReusableMethods.selectRandomTextFromDropdown(select);
+        US015_stepDefinitions.selectRandomTextFromDropdown(select);
         ReusableMethods.waitFor(3);
         Driver.waitAndSendText(us015_page.addressBox,faker.address().streetAddress());
         Driver.waitAndSendText(us015_page.descriptionBox,faker.lorem().word());
         select=new Select(us015_page.userBox);
-        ReusableMethods.selectRandomTextFromDropdown(select);
+        US015_stepDefinitions.selectRandomTextFromDropdown(select);
         ReusableMethods.waitFor(3);
         select=new Select(us015_page.countryBox);
         select.selectByVisibleText("USA");
@@ -189,15 +193,15 @@ public class US015_stepDefinitions {
         Driver.waitAndSendText(us015_page.emailBox,faker.internet().emailAddress());
         Driver.waitAndSendText(us015_page.phoneBox,faker.number().digits(10));
         Select select=new Select(us015_page.genderBox);
-        ReusableMethods.selectRandomTextFromDropdown(select);
+        US015_stepDefinitions.selectRandomTextFromDropdown(select);
         ReusableMethods.waitFor(3);
         select = new Select(us015_page.bloodGroupBox);
-        ReusableMethods.selectRandomTextFromDropdown(select);
+        US015_stepDefinitions.selectRandomTextFromDropdown(select);
         ReusableMethods.waitFor(3);
         Driver.waitAndSendText(us015_page.addressBox,faker.address().streetAddress());
         Driver.waitAndSendText(us015_page.descriptionBox,faker.lorem().word());
         select=new Select(us015_page.userBox);
-        ReusableMethods.selectRandomTextFromDropdown(select);
+        US015_stepDefinitions.selectRandomTextFromDropdown(select);
         ReusableMethods.waitFor(3);
         select=new Select(us015_page.countryBox);
         select.selectByVisibleText("Fas");
@@ -256,7 +260,7 @@ public class US015_stepDefinitions {
         ReusableMethods.waitFor(3);
         us015_page.physicianButonu.click();
         Select select = new Select(us015_page.physicianButonu);
-        ReusableMethods.selectRandomTextFromDropdown(select);
+        US015_stepDefinitions.selectRandomTextFromDropdown(select);
         ReusableMethods.waitFor(3);
     }
 
@@ -264,5 +268,12 @@ public class US015_stepDefinitions {
     public void adminSaveButonunaTıklar() {
         us015_page.appointmentSaveButonu.click();
         ReusableMethods.waitFor(3);
+    }
+    public static WebElement selectRandomTextFromDropdown(Select select) {
+        Random random = new Random();
+        List<WebElement> weblist = select.getOptions();
+        int optionIndex = 1 + random.nextInt(weblist.size() - 1);
+        select.selectByIndex(optionIndex);
+        return select.getFirstSelectedOption();
     }
 }
