@@ -13,8 +13,8 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber.xml"}, // bu satir ile html,xml,json report olusturabiliyoruz
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@US26_TC02 ",
-        dryRun = true // step definition olusturmak icin calistirdiginda burayı true yapmayi unutma
+        tags = "@US10",
+        dryRun = false // step definition olusturmak icin calistirdiginda burayı true yapmayi unutma
 )
 
 public class Runner
