@@ -5,7 +5,6 @@ import pojos.Appointment;
 import pojos.Registrant;
 import pojos.US007_Appointment;
 import pojos.US_017_Test_items;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;

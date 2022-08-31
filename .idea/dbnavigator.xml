@@ -29,9 +29,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="ebd06903-a595-416d-90de-6c21d4fa1aaa">
-      <console name="medunna" type="STANDARD" schema="information_schema" session="Main"><![CDATA[select * from pg_catalog.pg_tables
-select * from public.c_test_item
-select *from public.c_test_item where name= 'folik asit 5]]></console>
+      <console name="medunna" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
