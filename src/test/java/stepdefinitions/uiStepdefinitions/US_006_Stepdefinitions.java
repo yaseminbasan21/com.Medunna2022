@@ -180,4 +180,7 @@ public class US_006_Stepdefinitions {
     public void kullanıcıHatalıBirEmailGirer(String email) {
         us006_page.emailBox.sendKeys(email);
     }
+
+
+
 }
