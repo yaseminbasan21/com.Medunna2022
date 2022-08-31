@@ -1,3 +1,4 @@
+@grid
 Feature:US008 Kullanıcı giriş yaptığında Password sekmesi düzenlenebilir olmalıdır.
 
   @Admin,@Smoke
@@ -72,3 +73,5 @@ Feature:US008 Kullanıcı giriş yaptığında Password sekmesi düzenlenebilir 
     And kullanici new password kutusuna eski parolasini girer ve Password strength seviyesinin degistigini gorur
     And kullanici Confirm new password kutusuna eski parolasini tekrar girer
     And kullanici Save butonuna tiklar ve Pasword Changed mesajini gormemelidir
+    And kullanici signout'a tiklar
+    And kullanici sayfayi kapatir
