@@ -29,30 +29,30 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="48631f2f-a381-4da6-a635-6b0d46c560dc">
-      <console name="Medunna" type="STANDARD" schema="information_schema" session="Main"><![CDATA[select id from "public".appointment
+      <console name="Medunna" type="STANDARD" schema="information_schema" session="Main">select id from &quot;public&quot;.appointment
 
-select * from "public".appointment where id=157538
+select * from &quot;public&quot;.appointment where id=157538
 
-select * from "public".appointment where id=166158
+select * from &quot;public&quot;.appointment where id=166158
 
-select * from "public".rooms]]></console>
+select * from &quot;public&quot;.rooms</console>
     </connection>
     <connection id="96ff7dd3-a06b-4a59-bbff-ef80ee81f739">
-      <console name="Medunna05" type="STANDARD" schema="" session="Main"><![CDATA[select id from "public".appointment
+      <console name="Medunna05" type="STANDARD" schema="" session="Main">select id from &quot;public&quot;.appointment
 
-select * from "public".appointment where id=3403
+select * from &quot;public&quot;.appointment where id=3403
 
-select * from "public".appointment where id=185704]]></console>
+select * from &quot;public&quot;.appointment where id=185704</console>
     </connection>
     <connection id="3f001348-ffa4-4924-bb73-21b705bc8135">
-      <console name="Medunna005" type="STANDARD" schema="" session="Main"><![CDATA[select * from "public".appointment
+      <console name="Medunna005" type="STANDARD" schema="" session="Main">select * from &quot;public&quot;.appointment
 
-select * from "public".appointment where id=3403
+select * from &quot;public&quot;.appointment where id=3403
 
-select * from "public".appointment where id=185704]]></console>
+select * from &quot;public&quot;.appointment where id=185704</console>
     </connection>
     <connection id="93419882-6f2c-40ea-b99e-1aaaff56a7e3">
-      <console name="Medunna16" type="STANDARD" schema="information_schema" session="Main"><![CDATA[select * from "public".room]]></console>
+      <console name="Medunna16" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
