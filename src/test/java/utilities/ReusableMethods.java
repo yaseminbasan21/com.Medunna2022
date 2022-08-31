@@ -20,6 +20,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.function.Function;
+
 public class ReusableMethods {
 
     public static String getScreenshot(String name) throws IOException {
@@ -152,8 +153,7 @@ public class ReusableMethods {
         return element;
     }
 
-        public static String setTheDate (String format,int atMostDay, int atMostMonth, int atMostYear)
-        {
+        public static String setTheDate (String format,int atMostDay, int atMostMonth, int atMostYear) {
             // verilen gun ay yıl kadar oncesine gidip tarih olusturur
             // verilen gun ay yıl kadar sonrasına gidip tarih olusturur
             // Date date = new Date();
@@ -167,8 +167,7 @@ public class ReusableMethods {
             return dateF;
         }
 
-        public static String setTheDateByRandom (String format,int atMostYear, String direction)
-        {
+        public static String setTheDateByRandom (String format,int atMostYear, String direction) {
 
             int day = (int) (Math.random() * 366 + 1);
             int month = (int) (Math.random() * 13 + 1);
@@ -197,8 +196,8 @@ public class ReusableMethods {
 
             }
         }
-        public static String setTheDateByRandomWithTime (String format,int atMostYear, String direction)
-        {
+
+        public static String setTheDateByRandomWithTime (String format,int atMostYear, String direction) {
 
         int day = (int) (Math.random() * 366 + 1);
         int month = (int) (Math.random() * 13 + 1);
@@ -228,8 +227,7 @@ public class ReusableMethods {
         }
     }
 
-        public static String stringDateFormat (String date)
-        {
+        public static String stringDateFormat (String date) {
             String day = date.substring(0, 2);
             String month = date.substring(3, 5);
             String year = date.substring(6);
@@ -242,8 +240,8 @@ public class ReusableMethods {
             // 2030-01-01  yıl ay gun olmalı
 
         }
-    public static String stringDateFormat2 (String date)
-    {
+
+        public static String stringDateFormat2 (String date) {
         String day = date.substring(0, 2);
         String month = date.substring(3, 5);
         String year = date.substring(6);
@@ -256,11 +254,17 @@ public class ReusableMethods {
         // 2030-01-01  yıl ay gun olmalı
 
     }
+
     public static void hooverByJS(WebElement element) {
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         jse.executeScript("arguments[0].scrollIntoView()", element);
         jse.executeScript("arguments[0].click();", element);
     }
+
+
+
+
+
 
 
 }
