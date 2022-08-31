@@ -1,136 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="5" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="36.196">
-    <testcase classname="US016_Oda Oluşturma / Görüntüleme / Güncelleme /Silme (Admin)" name="TC01_Admin, yatan hastalar için yeni oda oluşturabilir." time="23.831">
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="109.953">
+    <testcase classname="Fatura Ödemesi (Staff)" name="TC_001 Kullanıcı (Staff) fatura oluşturabilmelidir" time="104.663">
         <system-out>
-            <![CDATA[Given "medunnaUrl" e gidilir, ikon ve Sign in butonu tiklanir...............passed
-And Gecerli kullanici bilgisi "admin_username" ve "admin_password" girilir ve Signin tiklanir..passed
-And Acilan sayfada girilen kullanici isminin gorunur oldugu test edilir.....passed
-And Items&Titles basligi ve Room tiklanir...................................passed
-And Create a new Room butonu tiklanir ve acilan sayfada Create or edit a Room yazisinin gorunur oldugu dogrulanir..passed
+            <![CDATA[Given Kullanicilar Medunna sayfasina gider ve giris yaparlar................passed
+Then Hasta My Pages sekmesinden Make an Appointment butonuna tiklar.........passed
+And Hasta Phone ve Date kisimlarini doldurur ve send butonuna basar.........passed
+Then Staff MY PAGES den Search Patient butonuna tiklar......................passed
+And Staff Patient SSN: text boxina hastanin SSN numarasi girer..............passed
+And Staff Show Appointments butonuna tiklar.................................passed
+And Staff Edit butonuna tiklar..............................................passed
+And Staff Status kismini PENDING yapar ve Physician kismini 208866:doktor hakki:NUCLEAR_MEDICINE olarak doldurur.passed
+And Staff Save butonuna tiklar..............................................passed
+Then Doktor My Page sekmesinden My Appointments butonuna tiklar.............passed
+And Doktor Edit butonuna tiklar.............................................passed
+And Doktor Request A Test butonuna tiklar...................................passed
+And Doktor yapilacak testleri secer ve save butonuna tiklar.................passed
+And Doktor status kismini COMPLETED yapar ve diger bilgileri doldurur ve save butonuna tiklar.passed
+Then Staff  Patient SSN: text boxina hastanin SSN numarasi girer............passed
+And Staff Show Appointments butonuna tiklar.................................passed
+And Staff Payment butonuna tiklar...........................................passed
+And Staff Creat Invoice butonuna tiklar.....................................passed
+And Staff  Save butonuna tiklar.............................................passed
+And Staff basari mesajinin varligini test eder..............................passed
+Then Hasta My Page sekmesinden My Appointments butonuna basar...............passed
+And Hasta Show Invoice butonuna tiklar ve fatura bilgilerinin gorundugunu test eder.passed
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="US016_Oda Oluşturma / Görüntüleme / Güncelleme /Silme (Admin)" name="TC02_Oda oluşturulurken Room Number mutlaka olmalı,Room Type; TWIN, DELUXE, PREMIUM_DELUXE, SUIT ve DAYCARE olmalı" time="11.794">
-        <failure message="Unable to find element with locator By.xpath: //span[normalize-space()='Sign in']&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.1', revision: 'e8fcc2cecf'&#10;System info: host: 'LAPTOP-43OHS80U', ip: '192.168.1.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'&#10;Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchElementException">
-            <![CDATA[Given "medunnaUrl" e gidilir, ikon ve Sign in butonu tiklanir...............failed
-And Gecerli kullanici bilgisi "admin_username" ve "admin_password" girilir ve Signin tiklanir..skipped
-And Acilan sayfada girilen kullanici isminin gorunur oldugu test edilir.....skipped
-And Items&Titles basligi ve Room tiklanir...................................skipped
-And Create a new Room butonu tiklanir ve acilan sayfada Create or edit a Room yazisinin gorunur oldugu dogrulanir..skipped
-And Room number textbox'ina gecerli deger girilir, gecersiz deger girildiginde This field should be a number. uyarisi alinir..skipped
-And Room Type TWIN, DELUXE, PREMIUM_DELUXE, SUIT ve DAYCARE olarak secilir..skipped
-And Status butonunun secilebilir oldugu test edilir.........................skipped
-And Price textbox'i bos birakilir ve This field is required. uyarisi aldigi goruntulenir..skipped
-And Price textbox'ina gecersiz deger girilir ve This field should be at least . uyarisi aldigi goruntulenir.skipped
-And Price textbox'ina gecerli deger girilir ve gecerli deger girildigi dogrulanir..skipped
-And Description textbox'i bos birakilir ve bos birakildigi dogrulanir.......skipped
-And Created Date icin tarih bilgisi "03.09.2022" seklinde gunayyil girilir..skipped
-And Created Date icin girilen tarih bilgisinin gunayyil (aygunyil) seklinde oldugu test edilir..skipped
-And Oda basarili bir sekilde kaydedilir ve dogrulanir.......................skipped
+    <testcase classname="Fatura Ödemesi (Staff)" name="TC_002 Bu portalda, hastanın fatura oluşturabilmesi için durumu tamamlandı veya İptal edildi olması gerekir." time="1.391">
+        <failure message="element click intercepted: Element is not clickable at point (759, 2899)&#10;  (Session info: chrome=104.0.5112.102)&#10;Build info: version: '4.1.1', revision: 'e8fcc2cecf'&#10;System info: host: 'A-QUANT', ip: '192.168.1.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [0f6fb580573f9cf50ddcef44bc672e6c, clickElement {id=bb70bbd3-ab16-40e5-bf66-9f416352049e}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\meren\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52596}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52596/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on WINDOWS (0f6fb580573f9cf50ddcef44bc672e6c)] -&gt; xpath: //button[@type='submit']]&#10;Session ID: 0f6fb580573f9cf50ddcef44bc672e6c" type="org.openqa.selenium.ElementClickInterceptedException">
+            <![CDATA[Given Kullanici Medunna sayfasina gider.....................................passed
+Then Staff staff hesabi ile siteye giris yapar..............................failed
+And Staff MY PAGES sekmesinden Search Patient butonuna tiklar...............skipped
+Then Staff Patient SSN: text boxina SSN numarasi girer......................skipped
+And Staff hastada gorunen Show Appointments butonuna tiklar.................skipped
+And Staff Completed ve canceled statusune sahip randevularin Payment kisminin gorundugunu test eder.skipped
 
 StackTrace:
-org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //span[normalize-space()='Sign in']
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.1.1', revision: 'e8fcc2cecf'
-System info: host: 'LAPTOP-43OHS80U', ip: '192.168.1.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy22.getWrappedElement(Unknown Source)
-	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:474)
-	at utilities.JSUtils.clickElementByJS(JSUtils.java:12)
-	at stepdefinitions.uiStepdefinitions.US016_stepDefinitions.eGidilirIkonVeSignInButonuTiklanir(US016_stepDefinitions.java:41)
-	at ✽."medunnaUrl" e gidilir, ikon ve Sign in butonu tiklanir.(file:///C:/Users/efetu/IdeaProjects/com.medunna2022/src/test/resources/features/uiFeatures/US016.feature:17)
-]]>
-        </failure>
-    </testcase>
-    <testcase classname="US016_Oda Oluşturma / Görüntüleme / Güncelleme /Silme (Admin)" name="TC07_Kullanici Created Date alani icin gecmis tarih girdiginde randevu olusturulmamalidir" time="0.013">
-        <failure message="Failed to instantiate class stepdefinitions.uiStepdefinitions.US016_stepDefinitions" type="io.cucumber.core.exception.CucumberException">
-            <![CDATA[Given "medunnaUrl" e gidilir, ikon ve Sign in butonu tiklanir...............failed
-And Gecerli kullanici bilgisi "admin_username" ve "admin_password" girilir ve Signin tiklanir..skipped
-And Acilan sayfada girilen kullanici isminin gorunur oldugu test edilir.....skipped
-And Items&Titles basligi ve Room tiklanir...................................skipped
-And Create a new Room butonu tiklanir ve acilan sayfada Create or edit a Room yazisinin gorunur oldugu dogrulanir..skipped
-And Room Number, Room Type, Status, Price, Description kisimlari istenilen sekilde doldurulur..skipped
-And Created Date gecmis bir tarih bilgisi ile doldurulur ve Save butonuna basildiginda 'A new Room is created with identifier' mesajinin gorunmedigi dogrulanir..skipped
-
-StackTrace:
-io.cucumber.core.exception.CucumberException: Failed to instantiate class stepdefinitions.uiStepdefinitions.US016_stepDefinitions
-	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:67)
-	at io.cucumber.core.backend.DefaultObjectFactory.getInstance(DefaultObjectFactory.java:45)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:86)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:95)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$3(CucumberExecutionContext.java:151)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:151)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at io.cucumber.junit.Cucumber$RunBeforeAllHooks.evaluate(Cucumber.java:266)
-	at io.cucumber.junit.Cucumber$RunAfterAllHooks.evaluate(Cucumber.java:281)
-	at io.cucumber.junit.Cucumber$StartTestRun.evaluate(Cucumber.java:233)
-	at io.cucumber.junit.Cucumber$FinishTestRun.evaluate(Cucumber.java:248)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
-	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
-Caused by: java.lang.reflect.InvocationTargetException
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:53)
-	... 46 more
-Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (759, 2899)
   (Session info: chrome=104.0.5112.102)
 Build info: version: '4.1.1', revision: 'e8fcc2cecf'
-System info: host: 'LAPTOP-43OHS80U', ip: '192.168.1.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+System info: host: 'A-QUANT', ip: '192.168.1.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d9ba29625bd8d0599365219d2a0ef7a0, maximizeCurrentWindow {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\efetu\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59964}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59964/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: d9ba29625bd8d0599365219d2a0ef7a0
+Command: [0f6fb580573f9cf50ddcef44bc672e6c, clickElement {id=bb70bbd3-ab16-40e5-bf66-9f416352049e}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\meren\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52596}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52596/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (0f6fb580573f9cf50ddcef44bc672e6c)] -> xpath: //button[@type='submit']]
+Session ID: 0f6fb580573f9cf50ddcef44bc672e6c
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -142,89 +57,39 @@ Session ID: d9ba29625bd8d0599365219d2a0ef7a0
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:969)
-	at utilities.Driver.getDriver(Driver.java:61)
-	at pages.US016_page.<init>(US016_page.java:11)
-	at stepdefinitions.uiStepdefinitions.US016_stepDefinitions.<init>(US016_stepDefinitions.java:30)
-	... 51 more
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at jdk.internal.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy22.click(Unknown Source)
+	at stepdefinitions.uiStepdefinitions.US022_stepDefinitions.staff_staff_hesabi_ile_siteye_giris_yapar(US022_stepDefinitions.java:28)
+	at ✽.Staff staff hesabi ile siteye giris yapar(file:///C:/Users/meren/IdeaProjects/com.medunna2022/src/test/resources/features/uiFeatures/US023.feature:32)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="US016_Oda Oluşturma / Görüntüleme / Güncelleme /Silme (Admin)" name="TC08_Admin aynı tür odaları görebilir." time="0.009">
-        <failure message="Failed to instantiate class stepdefinitions.uiStepdefinitions.US016_stepDefinitions" type="io.cucumber.core.exception.CucumberException">
-            <![CDATA[Given "medunnaUrl" e gidilir, ikon ve Sign in butonu tiklanir...............failed
-And Gecerli kullanici bilgisi "admin_username" ve "admin_password" girilir ve Signin tiklanir..skipped
-And Acilan sayfada girilen kullanici isminin gorunur oldugu test edilir.....skipped
-And Items&Titles basligi ve Room tiklanir...................................skipped
-And Acilan sayfada Room Type tiklanir ve ayni tur olan odalarin gorunur oldugu dogrulanir..skipped
+    <testcase classname="Fatura Ödemesi (Staff)" name="TC_003 Kullanıcı, Muayene ücreti, test ürün fiyatları gibi tüm faturaları görüntüleyebilir ve hasta için yeni bir fatura oluşturabilir." time="1.983">
+        <failure message="element click intercepted: Element is not clickable at point (759, 2891)&#10;  (Session info: chrome=104.0.5112.102)&#10;Build info: version: '4.1.1', revision: 'e8fcc2cecf'&#10;System info: host: 'A-QUANT', ip: '192.168.1.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [0f6fb580573f9cf50ddcef44bc672e6c, clickElement {id=7ef2f096-19df-4bdf-ad98-07fcc7ea5525}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\meren\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52596}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52596/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on WINDOWS (0f6fb580573f9cf50ddcef44bc672e6c)] -&gt; xpath: //button[@type='submit']]&#10;Session ID: 0f6fb580573f9cf50ddcef44bc672e6c" type="org.openqa.selenium.ElementClickInterceptedException">
+            <![CDATA[Given Kullanici Medunna sayfasina gider.....................................passed
+Then Staff staff hesabi ile siteye giris yapar..............................failed
+And Staff MY PAGES sekmesinden Search Patient butonuna tiklar...............skipped
+Then Staff Patient SSN text boxina SSN numarasi girer.......................skipped
+And Staff hastada gorunen Show Appointments butonuna tiklar.................skipped
+And Staff Payment buttonuna tiklar..........................................skipped
+And Staff Exam fee: kisminin gorunurlugunu test eder........................skipped
+And Staff Test Item Fee kisminin gorunurlugunu test eder....................skipped
 
 StackTrace:
-io.cucumber.core.exception.CucumberException: Failed to instantiate class stepdefinitions.uiStepdefinitions.US016_stepDefinitions
-	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:67)
-	at io.cucumber.core.backend.DefaultObjectFactory.getInstance(DefaultObjectFactory.java:45)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:86)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:95)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$3(CucumberExecutionContext.java:151)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:151)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at io.cucumber.junit.Cucumber$RunBeforeAllHooks.evaluate(Cucumber.java:266)
-	at io.cucumber.junit.Cucumber$RunAfterAllHooks.evaluate(Cucumber.java:281)
-	at io.cucumber.junit.Cucumber$StartTestRun.evaluate(Cucumber.java:233)
-	at io.cucumber.junit.Cucumber$FinishTestRun.evaluate(Cucumber.java:248)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
-	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
-Caused by: java.lang.reflect.InvocationTargetException
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:53)
-	... 46 more
-Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (759, 2891)
   (Session info: chrome=104.0.5112.102)
 Build info: version: '4.1.1', revision: 'e8fcc2cecf'
-System info: host: 'LAPTOP-43OHS80U', ip: '192.168.1.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+System info: host: 'A-QUANT', ip: '192.168.1.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d9ba29625bd8d0599365219d2a0ef7a0, maximizeCurrentWindow {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\efetu\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59964}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59964/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: d9ba29625bd8d0599365219d2a0ef7a0
+Command: [0f6fb580573f9cf50ddcef44bc672e6c, clickElement {id=7ef2f096-19df-4bdf-ad98-07fcc7ea5525}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\meren\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52596}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52596/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (0f6fb580573f9cf50ddcef44bc672e6c)] -> xpath: //button[@type='submit']]
+Session ID: 0f6fb580573f9cf50ddcef44bc672e6c
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -236,90 +101,37 @@ Session ID: d9ba29625bd8d0599365219d2a0ef7a0
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:969)
-	at utilities.Driver.getDriver(Driver.java:61)
-	at pages.US016_page.<init>(US016_page.java:11)
-	at stepdefinitions.uiStepdefinitions.US016_stepDefinitions.<init>(US016_stepDefinitions.java:30)
-	... 51 more
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at jdk.internal.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy22.click(Unknown Source)
+	at stepdefinitions.uiStepdefinitions.US022_stepDefinitions.staff_staff_hesabi_ile_siteye_giris_yapar(US022_stepDefinitions.java:28)
+	at ✽.Staff staff hesabi ile siteye giris yapar(file:///C:/Users/meren/IdeaProjects/com.medunna2022/src/test/resources/features/uiFeatures/US023.feature:41)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="US016_Oda Oluşturma / Görüntüleme / Güncelleme /Silme (Admin)" name="TC09_Admin mevcut odaları düzenleyebilir ve güncelleyebilir." time="0.019">
-        <failure message="Failed to instantiate class stepdefinitions.uiStepdefinitions.US016_stepDefinitions" type="io.cucumber.core.exception.CucumberException">
-            <![CDATA[Given "medunnaUrl" e gidilir, ikon ve Sign in butonu tiklanir...............failed
-And Gecerli kullanici bilgisi "admin_username" ve "admin_password" girilir ve Signin tiklanir..skipped
-And Acilan sayfada girilen kullanici isminin gorunur oldugu test edilir.....skipped
-And Items&Titles basligi ve Room tiklanir...................................skipped
-And Olusturulan oda bulunur ve edit tiklanir, gerekli guncellemeler yapilir ve save butonu tiklanir..skipped
-And Basarili sekilde guncelleme yapildigi cikan A Message is updated with identifier yazisi ile dogrulanir..skipped
+    <testcase classname="Fatura Ödemesi (Staff)" name="TC_004 Kullanıcı daha sonra hastaya gönderilen faturayı görebilir" time="1.63">
+        <failure message="element click intercepted: Element is not clickable at point (759, 2898)&#10;  (Session info: chrome=104.0.5112.102)&#10;Build info: version: '4.1.1', revision: 'e8fcc2cecf'&#10;System info: host: 'A-QUANT', ip: '192.168.1.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [0f6fb580573f9cf50ddcef44bc672e6c, clickElement {id=b9c6efb3-6f95-4cac-9206-e07035c8556b}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\meren\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52596}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52596/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on WINDOWS (0f6fb580573f9cf50ddcef44bc672e6c)] -&gt; xpath: //button[@type='submit']]&#10;Session ID: 0f6fb580573f9cf50ddcef44bc672e6c" type="org.openqa.selenium.ElementClickInterceptedException">
+            <![CDATA[Given Kullanici Medunna sayfasina gider.....................................passed
+Then Staff staff hesabi ile siteye giris yapar..............................failed
+And Staff MY PAGES sekmesinden Search Patient butonuna tiklar...............skipped
+Then Staff Patient SSN text boxina SSN numarasi girer.......................skipped
+And Staff hastada gorunen Show Appointments butonuna tiklar.................skipped
+And Staff daha once olusturulan faturanin gorunurlugunu test eder...........skipped
 
 StackTrace:
-io.cucumber.core.exception.CucumberException: Failed to instantiate class stepdefinitions.uiStepdefinitions.US016_stepDefinitions
-	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:67)
-	at io.cucumber.core.backend.DefaultObjectFactory.getInstance(DefaultObjectFactory.java:45)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:86)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:95)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$3(CucumberExecutionContext.java:151)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:151)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at io.cucumber.junit.Cucumber$RunBeforeAllHooks.evaluate(Cucumber.java:266)
-	at io.cucumber.junit.Cucumber$RunAfterAllHooks.evaluate(Cucumber.java:281)
-	at io.cucumber.junit.Cucumber$StartTestRun.evaluate(Cucumber.java:233)
-	at io.cucumber.junit.Cucumber$FinishTestRun.evaluate(Cucumber.java:248)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
-	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
-Caused by: java.lang.reflect.InvocationTargetException
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:53)
-	... 46 more
-Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (759, 2898)
   (Session info: chrome=104.0.5112.102)
 Build info: version: '4.1.1', revision: 'e8fcc2cecf'
-System info: host: 'LAPTOP-43OHS80U', ip: '192.168.1.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+System info: host: 'A-QUANT', ip: '192.168.1.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d9ba29625bd8d0599365219d2a0ef7a0, maximizeCurrentWindow {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\efetu\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59964}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59964/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: d9ba29625bd8d0599365219d2a0ef7a0
+Command: [0f6fb580573f9cf50ddcef44bc672e6c, clickElement {id=b9c6efb3-6f95-4cac-9206-e07035c8556b}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\meren\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52596}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52596/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (0f6fb580573f9cf50ddcef44bc672e6c)] -> xpath: //button[@type='submit']]
+Session ID: 0f6fb580573f9cf50ddcef44bc672e6c
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -331,108 +143,15 @@ Session ID: d9ba29625bd8d0599365219d2a0ef7a0
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:969)
-	at utilities.Driver.getDriver(Driver.java:61)
-	at pages.US016_page.<init>(US016_page.java:11)
-	at stepdefinitions.uiStepdefinitions.US016_stepDefinitions.<init>(US016_stepDefinitions.java:30)
-	... 51 more
-]]>
-        </failure>
-    </testcase>
-    <testcase classname="US016_Oda Oluşturma / Görüntüleme / Güncelleme /Silme (Admin)" name="TC10_Odalar Admin tarafından silinebilir." time="0.025">
-        <failure message="Failed to instantiate class stepdefinitions.uiStepdefinitions.US016_stepDefinitions" type="io.cucumber.core.exception.CucumberException">
-            <![CDATA[Given "medunnaUrl" e gidilir, ikon ve Sign in butonu tiklanir...............failed
-And Gecerli kullanici bilgisi "admin_username" ve "admin_password" girilir ve Signin tiklanir..skipped
-And Acilan sayfada girilen kullanici isminin gorunur oldugu test edilir.....skipped
-And Items&Titles basligi ve Room tiklanir...................................skipped
-And Olusturulan oda bulunur ve delete tiklanir..............................skipped
-And Silme isleminin basarili sekilde gerceklestigi  A Message is deleted with identifier mesaji ile dogrulanir..skipped
-
-StackTrace:
-io.cucumber.core.exception.CucumberException: Failed to instantiate class stepdefinitions.uiStepdefinitions.US016_stepDefinitions
-	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:67)
-	at io.cucumber.core.backend.DefaultObjectFactory.getInstance(DefaultObjectFactory.java:45)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:86)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:95)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$3(CucumberExecutionContext.java:151)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:151)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at io.cucumber.junit.Cucumber$RunBeforeAllHooks.evaluate(Cucumber.java:266)
-	at io.cucumber.junit.Cucumber$RunAfterAllHooks.evaluate(Cucumber.java:281)
-	at io.cucumber.junit.Cucumber$StartTestRun.evaluate(Cucumber.java:233)
-	at io.cucumber.junit.Cucumber$FinishTestRun.evaluate(Cucumber.java:248)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
-	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
-Caused by: java.lang.reflect.InvocationTargetException
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:53)
-	... 46 more
-Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=104.0.5112.102)
-Build info: version: '4.1.1', revision: 'e8fcc2cecf'
-System info: host: 'LAPTOP-43OHS80U', ip: '192.168.1.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d9ba29625bd8d0599365219d2a0ef7a0, maximizeCurrentWindow {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\efetu\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59964}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59964/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: d9ba29625bd8d0599365219d2a0ef7a0
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:969)
-	at utilities.Driver.getDriver(Driver.java:61)
-	at pages.US016_page.<init>(US016_page.java:11)
-	at stepdefinitions.uiStepdefinitions.US016_stepDefinitions.<init>(US016_stepDefinitions.java:30)
-	... 51 more
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at jdk.internal.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy22.click(Unknown Source)
+	at stepdefinitions.uiStepdefinitions.US022_stepDefinitions.staff_staff_hesabi_ile_siteye_giris_yapar(US022_stepDefinitions.java:28)
+	at ✽.Staff staff hesabi ile siteye giris yapar(file:///C:/Users/meren/IdeaProjects/com.medunna2022/src/test/resources/features/uiFeatures/US023.feature:52)
 ]]>
         </failure>
     </testcase>

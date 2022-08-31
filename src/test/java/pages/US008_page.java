@@ -7,8 +7,10 @@ import utilities.Driver;
 
 
 public class US008_page {
-    public US008_page() {PageFactory.initElements(Driver.getDriver(),this);
+    public US008_page() {
+        PageFactory.initElements(Driver.getDriver(), this);
     }
+
     @FindBy(xpath = "//a[@class='d-flex align-items-center dropdown-toggle nav-link']")
     public WebElement giris;
 
