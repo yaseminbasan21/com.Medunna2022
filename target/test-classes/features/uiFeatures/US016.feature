@@ -1,4 +1,4 @@
-@US19
+@US16
 Feature:US016_Oda Oluşturma / Görüntüleme / Güncelleme /Silme (Admin)
 
   Scenario: TC01_Admin, yatan hastalar için yeni oda oluşturabilir.
