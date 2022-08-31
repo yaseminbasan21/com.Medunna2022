@@ -24,7 +24,7 @@ public class US008_stepdefinitions {
 
     @Given("kullanici medunna anasayfasinda")
     public void kullaniciMedunnaAnasayfasinda() throws MalformedURLException {
-        Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("smedunnaUrl"));
        //driver = new RemoteWebDriver(new URL("http://192.168.1.38:4444"), new ChromeOptions());
        //driver.manage().window().maximize();
        //driver.get(ConfigReader.getProperty("medunnaUrl"));
