@@ -8,12 +8,12 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 
 @CucumberOptions(
-        plugin={"html:target/cucumber-html-reports/cucumber.html", // buradaki / \\ idi, degistirdim, emin degilim
+        plugin={"html:target/cucumber-html-reports/cucumber.html",
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml"}, // bu satir ile html,xml,json report olusturabiliyoruz
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@us10",
+        tags = "@US19",
         dryRun = false // step definition olusturmak icin calistirdiginda burayı true yapmayi unutma
 )
 

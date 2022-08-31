@@ -249,12 +249,32 @@ public class ReusableMethods {
         String month = date.substring(3, 5);
         String year = date.substring(6);
 
+
         String formatDateString = year + "-" + day + "-" + month;
 
         return formatDateString;
 
         // buraya gelen  gun ay yil gg.aa.yyyy
-        // 2030-01-01  yıl ay gun olmalı
+        // 2030-01-01  yıl gun ay olmalı
+
+    }
+
+    public static String stringDateTimeFormat (String date)
+    {
+        String day = date.substring(0, 2);
+        String month = date.substring(3, 5);
+        String year = date.substring(6,12);
+        String hour = date.substring(13, 15);
+        String minute = date.substring(16);
+
+
+
+        String formatDateTimeString = year + "-" + day + "-" + month + "T" + hour + ":" + minute;
+
+        return formatDateTimeString;
+
+        // buraya gelen  gun ay yil gg.aa.yyyy
+        // 2030-01-01  yıl gun ay olmalı
 
     }
     public static void hooverByJS(WebElement element) {
@@ -262,4 +282,7 @@ public class ReusableMethods {
         jse.executeScript("arguments[0].scrollIntoView()", element);
         jse.executeScript("arguments[0].click();", element);
     }
-}
+
+
+    }
+
