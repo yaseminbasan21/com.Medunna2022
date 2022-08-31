@@ -5,7 +5,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoSuchElementException;
 import pages.US001_page;
 import pages.US002_page;
 import utilities.ConfigReader;
@@ -15,7 +14,7 @@ import utilities.ReusableMethods;
 
 import static org.junit.Assert.*;
 
-public class US001_StepDefinitions {
+public class US001_stepDefinitions {
 
     US001_page us001_page = new US001_page();
     US002_page us002_page = new US002_page();

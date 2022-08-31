@@ -23,8 +23,29 @@ public class DatabaseUtility {
     }
     public static void main(String[] args) {
         createConnection("jdbc:postgresql://medunna.com:5432/medunna_db","medunnadb_user" , "Medunnadb_@129");
-        System.out.println(getColumnData("Select * FROM jhi_user", "first_name"));
+
+        String query="Select * FROM jhi_user";
+       List<String>data=getColumnNames2(query, "ssn");
+        //System.out.println(getQueryResultMap(query));;
+        System.out.println(data);
+
+
         closeConnection();
+    }
+
+    public static List<String> getColumnNames2(String query, String columnName){
+        List<Object>data=getColumnData(query, columnName);
+        //database deki datalar bir column bilgisi olarak geliyor
+
+        List<String> donusenData=new ArrayList<>();
+        //bos bir String listi olusturduk
+
+        for (Object w: data) {
+            donusenData.add(w.toString());
+            //obje listini String listine aktardik
+        }
+
+        return donusenData;
     }
     public static void createConnection(String url, String user, String password) {
         try {
