@@ -16,6 +16,7 @@ public class US011_stepDefinitions {
 
     @Given("Doktor Medunna url'sine gider.")
     public void doktor_medunna_url_sine_gider() {
+
         Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
     }
     @Then("Doktor giris yapar..")
