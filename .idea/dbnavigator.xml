@@ -29,11 +29,13 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="48631f2f-a381-4da6-a635-6b0d46c560dc">
-      <console name="Medunna" type="STANDARD" schema="information_schema" session="Main"><![CDATA[select id from "public".appointment
+      <console name="Medunna" type="STANDARD" schema="information_schema" session="Pool"><![CDATA[select id from "public".country
 
 select * from "public".appointment where id=157538
 
-select * from "public".appointment where id=166158]]></console>
+select * from "public".appointment where id=166158
+
+select * from "public".country]]></console>
     </connection>
     <connection id="96ff7dd3-a06b-4a59-bbff-ef80ee81f739">
       <console name="Medunna05" type="STANDARD" schema="" session="Main"><![CDATA[select id from "public".appointment
@@ -57,6 +59,9 @@ select * from "public".appointment where id=185704]]></console>
     <connection id="48631f2f-a381-4da6-a635-6b0d46c560dc" />
     <connection id="96ff7dd3-a06b-4a59-bbff-ef80ee81f739" />
     <connection id="3f001348-ffa4-4924-bb73-21b705bc8135" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="48631f2f-a381-4da6-a635-6b0d46c560dc" dataset="public.country" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -103,7 +108,7 @@ select * from "public".appointment where id=185704]]></console>
           <database value="medunna_db" />
           <type value="USER_PASSWORD" />
           <user value="medunnadb_user" />
-          <deprecated-pwd value="TWVkdW5uYWRiX0AxMjk=" />
+          <deprecated-pwd value="" />
         </database>
         <properties>
           <auto-commit value="false" />
@@ -271,7 +276,7 @@ select * from "public".appointment where id=185704]]></console>
           <database value="medunna_db" />
           <type value="USER_PASSWORD" />
           <user value="medunnadb_user" />
-          <deprecated-pwd value="TWVkdW5uYWRiX0AxMjk=" />
+          <deprecated-pwd value="" />
         </database>
         <properties>
           <auto-commit value="false" />
@@ -380,6 +385,7 @@ select * from "public".appointment where id=185704]]></console>
         <object-type name="FUNCTİON" sorting-type="NAME" />
         <object-type name="PROCEDURE" sorting-type="NAME" />
         <object-type name="ARGUMENT" sorting-type="POSITION" />
+        <object-type name="TYPE ATTRİBUTE" sorting-type="POSITION" />
       </sorting>
       <default-editors>
         <object-type name="VİEW" editor-type="SELECTION" />

@@ -10,11 +10,12 @@ import utilities.WriteToTxt;
 import java.util.ArrayList;
 import java.util.List;
 
-public class US027dbStepdefinitions {
+public class US027_dbStepdefinitions {
     String query;
     List<Object> idList;
-    @Given("Kullanici DB ile MedunnaDB ye Baglanir")
+    @Given("ba DB ile MedunnaDB ye Baglanir")
     public void kullaniciDBIleMedunnaDBYeBaglanir() {
+
         DBUtils.createConnection();
         query ="select * from cmessage";
         System.out.println(DBUtils.getColumnNames(query));
@@ -22,7 +23,7 @@ public class US027dbStepdefinitions {
 
     }
 
-    @Then("Kullanici DB den Tum Mesajlarin Bilgisini Alir")
+    @Then("ba DB den Tum Mesajlarin Bilgisini Alir")
     public void kullaniciDBDenTumMesajlarinBilgisiniAlir() {
         idList=DBUtils.getColumnData(query,"id");
         String fileName = "src/test/resources/testData/MsjIDs.txt";
