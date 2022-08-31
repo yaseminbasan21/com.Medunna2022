@@ -264,7 +264,7 @@ public void ardından_admin_oturum_açar() {
     @Then("Kullanici  Medunna login adresine gider")
     public void kullanici_medunna_login_adresine_gider() throws InterruptedException {
 
-        Driver.getDriver().get(ConfigReader.getProperty("medunnaLoginUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("MedunnaLoginURL"));
         Thread.sleep(1000);
 
 
