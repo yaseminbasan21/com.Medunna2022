@@ -1,83 +1,158 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="55.324">
-    <testcase classname="Admin olarak; Yeni Staff (Personel) Oluşturma / Güncelleme / Görüntüleme ve Silme" name="TC05_API kullanarak staff listasi goruntulenebilmeli" time="3.64">
-        <failure message="Cannot deserialize instance of `pojos.US019_Staff` out of START_ARRAY token&#10; at [Source: (String)&quot;[&#10;    {&#10;        &quot;createdBy&quot;: &quot;team52&quot;,&#10;        &quot;createdDate&quot;: &quot;2022-08-30T10:56:29.395725Z&quot;,&#10;        &quot;id&quot;: 245983,&#10;        &quot;firstName&quot;: &quot;firstname52&quot;,&#10;        &quot;lastName&quot;: &quot;lastname52&quot;,&#10;        &quot;birthDate&quot;: &quot;2001-02-01T01:04:00Z&quot;,&#10;        &quot;phone&quot;: &quot;555-001-5555&quot;,&#10;        &quot;gender&quot;: &quot;FEMALE&quot;,&#10;        &quot;bloodGroup&quot;: &quot;Apositive&quot;,&#10;        &quot;adress&quot;: &quot;ayyildiz1&quot;,&#10;        &quot;description&quot;: &quot;aciklama1&quot;,&#10;        &quot;user&quot;: {&#10;            &quot;createdBy&quot;: &quot;team52&quot;,&#10;            &quot;createdDate&quot;: &quot;2022-08-28T12:14:04.789687&quot;[truncated 14423 chars]; line: 1, column: 1]" type="com.fasterxml.jackson.databind.exc.MismatchedInputException">
-            <![CDATA[Given Medunna Api Endpointinden staffleri goruntuler........................passed
-Then Medunna Api Endpointinden staffleri goruntuleme Isleminin Status Codeunun 200 Oldugunu Dogrular.passed
-And Medunna Api Endpointinden id numarali mesaji Okur ve mesajin "firstname52", "lastname52" ve "555-001-5555" bilgilerine sahip oldugunu dogrular..failed
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="109.953">
+    <testcase classname="Fatura Ödemesi (Staff)" name="TC_001 Kullanıcı (Staff) fatura oluşturabilmelidir" time="104.663">
+        <system-out>
+            <![CDATA[Given Kullanicilar Medunna sayfasina gider ve giris yaparlar................passed
+Then Hasta My Pages sekmesinden Make an Appointment butonuna tiklar.........passed
+And Hasta Phone ve Date kisimlarini doldurur ve send butonuna basar.........passed
+Then Staff MY PAGES den Search Patient butonuna tiklar......................passed
+And Staff Patient SSN: text boxina hastanin SSN numarasi girer..............passed
+And Staff Show Appointments butonuna tiklar.................................passed
+And Staff Edit butonuna tiklar..............................................passed
+And Staff Status kismini PENDING yapar ve Physician kismini 208866:doktor hakki:NUCLEAR_MEDICINE olarak doldurur.passed
+And Staff Save butonuna tiklar..............................................passed
+Then Doktor My Page sekmesinden My Appointments butonuna tiklar.............passed
+And Doktor Edit butonuna tiklar.............................................passed
+And Doktor Request A Test butonuna tiklar...................................passed
+And Doktor yapilacak testleri secer ve save butonuna tiklar.................passed
+And Doktor status kismini COMPLETED yapar ve diger bilgileri doldurur ve save butonuna tiklar.passed
+Then Staff  Patient SSN: text boxina hastanin SSN numarasi girer............passed
+And Staff Show Appointments butonuna tiklar.................................passed
+And Staff Payment butonuna tiklar...........................................passed
+And Staff Creat Invoice butonuna tiklar.....................................passed
+And Staff  Save butonuna tiklar.............................................passed
+And Staff basari mesajinin varligini test eder..............................passed
+Then Hasta My Page sekmesinden My Appointments butonuna basar...............passed
+And Hasta Show Invoice butonuna tiklar ve fatura bilgilerinin gorundugunu test eder.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Fatura Ödemesi (Staff)" name="TC_002 Bu portalda, hastanın fatura oluşturabilmesi için durumu tamamlandı veya İptal edildi olması gerekir." time="1.391">
+        <failure message="element click intercepted: Element is not clickable at point (759, 2899)&#10;  (Session info: chrome=104.0.5112.102)&#10;Build info: version: '4.1.1', revision: 'e8fcc2cecf'&#10;System info: host: 'A-QUANT', ip: '192.168.1.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [0f6fb580573f9cf50ddcef44bc672e6c, clickElement {id=bb70bbd3-ab16-40e5-bf66-9f416352049e}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\meren\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52596}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52596/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on WINDOWS (0f6fb580573f9cf50ddcef44bc672e6c)] -&gt; xpath: //button[@type='submit']]&#10;Session ID: 0f6fb580573f9cf50ddcef44bc672e6c" type="org.openqa.selenium.ElementClickInterceptedException">
+            <![CDATA[Given Kullanici Medunna sayfasina gider.....................................passed
+Then Staff staff hesabi ile siteye giris yapar..............................failed
+And Staff MY PAGES sekmesinden Search Patient butonuna tiklar...............skipped
+Then Staff Patient SSN: text boxina SSN numarasi girer......................skipped
+And Staff hastada gorunen Show Appointments butonuna tiklar.................skipped
+And Staff Completed ve canceled statusune sahip randevularin Payment kisminin gorundugunu test eder.skipped
 
 StackTrace:
-com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `pojos.US019_Staff` out of START_ARRAY token
- at [Source: (String)"[
-    {
-        "createdBy": "team52",
-        "createdDate": "2022-08-30T10:56:29.395725Z",
-        "id": 245983,
-        "firstName": "firstname52",
-        "lastName": "lastname52",
-        "birthDate": "2001-02-01T01:04:00Z",
-        "phone": "555-001-5555",
-        "gender": "FEMALE",
-        "bloodGroup": "Apositive",
-        "adress": "ayyildiz1",
-        "description": "aciklama1",
-        "user": {
-            "createdBy": "team52",
-            "createdDate": "2022-08-28T12:14:04.789687"[truncated 14423 chars]; line: 1, column: 1]
-	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:63)
-	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1343)
-	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1139)
-	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1093)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromArray(BeanDeserializerBase.java:1461)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:185)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:161)
-	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4013)
-	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3004)
-	at stepdefinitions.apiStepdefinitions.US019_apiStepdefinitions.medunnaApiEndpointindenIdNumaraliMesajiOkurVeMesajinVeBilgilerineSahipOldugunuDogrular(US019_apiStepdefinitions.java:50)
-	at ✽.Medunna Api Endpointinden id numarali mesaji Okur ve mesajin "firstname52", "lastname52" ve "555-001-5555" bilgilerine sahip oldugunu dogrular.(file:///C:/Users/Asus/IdeaProjects/com.medunna2022/src/test/resources/features/apiFeatures/US019.feature:7)
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (759, 2899)
+  (Session info: chrome=104.0.5112.102)
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'A-QUANT', ip: '192.168.1.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0f6fb580573f9cf50ddcef44bc672e6c, clickElement {id=bb70bbd3-ab16-40e5-bf66-9f416352049e}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\meren\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52596}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52596/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (0f6fb580573f9cf50ddcef44bc672e6c)] -> xpath: //button[@type='submit']]
+Session ID: 0f6fb580573f9cf50ddcef44bc672e6c
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at jdk.internal.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy22.click(Unknown Source)
+	at stepdefinitions.uiStepdefinitions.US022_stepDefinitions.staff_staff_hesabi_ile_siteye_giris_yapar(US022_stepDefinitions.java:28)
+	at ✽.Staff staff hesabi ile siteye giris yapar(file:///C:/Users/meren/IdeaProjects/com.medunna2022/src/test/resources/features/uiFeatures/US023.feature:32)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="US019_db Admin olarak; Yeni Staff (Personel) Oluşturma / Güncelleme / Görüntüleme ve Silme" name="Kullanici admin olarak staff bilgilerini db olarak dogrulayabilmeli" time="1.699">
-        <system-out>
-            <![CDATA[Given Kullanici database ile medunnaya baglanir.............................passed
-When staff datalarina erisir................................................passed
-And kullanici database den gelen bilgileri dogrular.........................passed
+    <testcase classname="Fatura Ödemesi (Staff)" name="TC_003 Kullanıcı, Muayene ücreti, test ürün fiyatları gibi tüm faturaları görüntüleyebilir ve hasta için yeni bir fatura oluşturabilir." time="1.983">
+        <failure message="element click intercepted: Element is not clickable at point (759, 2891)&#10;  (Session info: chrome=104.0.5112.102)&#10;Build info: version: '4.1.1', revision: 'e8fcc2cecf'&#10;System info: host: 'A-QUANT', ip: '192.168.1.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [0f6fb580573f9cf50ddcef44bc672e6c, clickElement {id=7ef2f096-19df-4bdf-ad98-07fcc7ea5525}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\meren\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52596}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52596/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on WINDOWS (0f6fb580573f9cf50ddcef44bc672e6c)] -&gt; xpath: //button[@type='submit']]&#10;Session ID: 0f6fb580573f9cf50ddcef44bc672e6c" type="org.openqa.selenium.ElementClickInterceptedException">
+            <![CDATA[Given Kullanici Medunna sayfasina gider.....................................passed
+Then Staff staff hesabi ile siteye giris yapar..............................failed
+And Staff MY PAGES sekmesinden Search Patient butonuna tiklar...............skipped
+Then Staff Patient SSN text boxina SSN numarasi girer.......................skipped
+And Staff hastada gorunen Show Appointments butonuna tiklar.................skipped
+And Staff Payment buttonuna tiklar..........................................skipped
+And Staff Exam fee: kisminin gorunurlugunu test eder........................skipped
+And Staff Test Item Fee kisminin gorunurlugunu test eder....................skipped
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (759, 2891)
+  (Session info: chrome=104.0.5112.102)
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'A-QUANT', ip: '192.168.1.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0f6fb580573f9cf50ddcef44bc672e6c, clickElement {id=7ef2f096-19df-4bdf-ad98-07fcc7ea5525}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\meren\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52596}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52596/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (0f6fb580573f9cf50ddcef44bc672e6c)] -> xpath: //button[@type='submit']]
+Session ID: 0f6fb580573f9cf50ddcef44bc672e6c
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at jdk.internal.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy22.click(Unknown Source)
+	at stepdefinitions.uiStepdefinitions.US022_stepDefinitions.staff_staff_hesabi_ile_siteye_giris_yapar(US022_stepDefinitions.java:28)
+	at ✽.Staff staff hesabi ile siteye giris yapar(file:///C:/Users/meren/IdeaProjects/com.medunna2022/src/test/resources/features/uiFeatures/US023.feature:41)
 ]]>
-        </system-out>
+        </failure>
     </testcase>
-    <testcase classname="US_019 Admin olarak; Yeni Staff (Personel) Oluşturma / Güncelleme / Görüntüleme ve Silme" name="TC_001 Admin SSN kullanarak; kayıtlı kişiler arasında Staff arayabilir." time="11.731">
-        <system-out>
-            <![CDATA[Given kullanici medunna anasayfasinda.......................................passed
-When kullanici giris ikonuna tiklar.........................................passed
-And kullanici Signin'a tiklar...............................................passed
-And kullanici "admin" olarak gecerli bir username ve "adminPassword" password girer.passed
-And kullanici admin olarak itemsTitles a tiklar.............................passed
-And kullanici admin olarak acilan DDM den Staff a tiklar....................passed
-And kullanici admin olarak Create a new Staff butonuna tiklar...............passed
-And kullanici admin olarak Use Search kutucugunu isaretleyip SSN kutusuna cagiracagi staff in SSN numarasini girer.passed
-Then kullanici admin olarak Search User butonuna tiklar.....................passed
+    <testcase classname="Fatura Ödemesi (Staff)" name="TC_004 Kullanıcı daha sonra hastaya gönderilen faturayı görebilir" time="1.63">
+        <failure message="element click intercepted: Element is not clickable at point (759, 2898)&#10;  (Session info: chrome=104.0.5112.102)&#10;Build info: version: '4.1.1', revision: 'e8fcc2cecf'&#10;System info: host: 'A-QUANT', ip: '192.168.1.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [0f6fb580573f9cf50ddcef44bc672e6c, clickElement {id=b9c6efb3-6f95-4cac-9206-e07035c8556b}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\meren\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52596}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52596/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on WINDOWS (0f6fb580573f9cf50ddcef44bc672e6c)] -&gt; xpath: //button[@type='submit']]&#10;Session ID: 0f6fb580573f9cf50ddcef44bc672e6c" type="org.openqa.selenium.ElementClickInterceptedException">
+            <![CDATA[Given Kullanici Medunna sayfasina gider.....................................passed
+Then Staff staff hesabi ile siteye giris yapar..............................failed
+And Staff MY PAGES sekmesinden Search Patient butonuna tiklar...............skipped
+Then Staff Patient SSN text boxina SSN numarasi girer.......................skipped
+And Staff hastada gorunen Show Appointments butonuna tiklar.................skipped
+And Staff daha once olusturulan faturanin gorunurlugunu test eder...........skipped
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (759, 2898)
+  (Session info: chrome=104.0.5112.102)
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'A-QUANT', ip: '192.168.1.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0f6fb580573f9cf50ddcef44bc672e6c, clickElement {id=b9c6efb3-6f95-4cac-9206-e07035c8556b}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\meren\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52596}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52596/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (0f6fb580573f9cf50ddcef44bc672e6c)] -> xpath: //button[@type='submit']]
+Session ID: 0f6fb580573f9cf50ddcef44bc672e6c
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at jdk.internal.reflect.GeneratedMethodAccessor40.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy22.click(Unknown Source)
+	at stepdefinitions.uiStepdefinitions.US022_stepDefinitions.staff_staff_hesabi_ile_siteye_giris_yapar(US022_stepDefinitions.java:28)
+	at ✽.Staff staff hesabi ile siteye giris yapar(file:///C:/Users/meren/IdeaProjects/com.medunna2022/src/test/resources/features/uiFeatures/US023.feature:52)
 ]]>
-        </system-out>
-    </testcase>
-    <testcase classname="US_019 Admin olarak; Yeni Staff (Personel) Oluşturma / Güncelleme / Görüntüleme ve Silme" name="Tüm bilgileri doldurulmalıdır" time="15.274">
-        <system-out>
-            <![CDATA[Given kullanici admin olarak guncellemek istedigi bilgileri ilgili kutulara doldurur.passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="US_019 Admin olarak; Yeni Staff (Personel) Oluşturma / Güncelleme / Görüntüleme ve Silme" name="TC_002 Admin kayıtlı kişilerden bir kullanıcı seçebilir." time="13.816">
-        <system-out>
-            <![CDATA[Given kullanici admin olarak bilgilerini duzenlemek istedigi Staff in uzerine gelip edit i tiklar.passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="US_019 Admin olarak; Yeni Staff (Personel) Oluşturma / Güncelleme / Görüntüleme ve Silme" name="TC_004 Admin, personeli silebilmeli." time="8.808">
-        <system-out>
-            <![CDATA[Given kullanici admin olarak bilgilerini silmek istedigi Staff in uzerine gelip Delete ye tiklar.passed
-When kullanici admin olarak Confirm delete operation dan tekrar Delete ye tiklar.passed
-And kullanici sayfayi kapatir...............................................passed
-]]>
-        </system-out>
+        </failure>
     </testcase>
 </testsuite>
