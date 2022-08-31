@@ -208,6 +208,11 @@ public class WriteToTxt {
             for (int i = 0; i < id.size(); i++)
                 writer.append(id.get(i).toString()+",\n");
 
+    public static void saveNameList(String fileName, List<Object> id) {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName,false));
+            for (int i = 0; i < id.size(); i++)
+                writer.append(id.get(i).toString()+",\n");
 
             writer.close();
 
@@ -216,5 +221,12 @@ public class WriteToTxt {
         }
     }
 
+
+            writer.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 }
