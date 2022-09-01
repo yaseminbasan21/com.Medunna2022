@@ -6,7 +6,7 @@ import java.util.List;
 
 import static utilities.DBUtils.*;
 
-public class US_009_DB_stepdefinitions {
+public class US_018_DB_stepdefinitions {
 
 
     public static int hastaToplamSayisi_DB;

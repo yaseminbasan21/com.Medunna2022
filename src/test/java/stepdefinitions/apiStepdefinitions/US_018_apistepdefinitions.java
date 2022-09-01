@@ -13,7 +13,7 @@ import utilities.ConfigReader;
 import static io.restassured.RestAssured.given;
 import static utilities.AuthenticationUS15.generateToken;
 
-public class US_009_apistepdefinitions {
+public class US_018_apistepdefinitions {
     Response response;
     Patient patient;
     public static RequestSpecification spec;
