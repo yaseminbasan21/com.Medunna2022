@@ -47,13 +47,13 @@ public class US_018_stepDefinitions {
     @And("Kullanici kullanici adi girer")
     public void kullaniciKullaniciAdiGirer() {
         ReusableMethods.waitFor(2);
-        us018Page.usernameButton.sendKeys("team_60");
+        us018Page.usernameButton.sendKeys("Team55.");
     }
 
     @And("Kullanici sifre girer")
     public void kullaniciSifreGirer() {
         ReusableMethods.waitFor(2);
-        us018Page.passwordButton.sendKeys("123456tr*");
+        us018Page.passwordButton.sendKeys("Team55..");
     }
 
     @And("Kullanici ikinci signin butonuna tiklar")
