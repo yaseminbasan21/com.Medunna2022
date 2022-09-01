@@ -3,8 +3,10 @@ package utilities;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import pojos.Registrant;
+import pojos.RoomPost;
 
 import static io.restassured.RestAssured.given;
+import static utilities.AuthenticationYeni.generateToken;
 
 public class ApiUtils {
 
@@ -67,6 +69,16 @@ public class ApiUtils {
 
 
         return  response;
+
+    }
+
+    public static Response postRequest2(String endpoint, RoomPost data){
+
+        Response response = given().headers(
+                "Authorization",
+                "Bearer " + generateToken()).body(data).contentType(ContentType.JSON).when().post(endpoint);
+
+        return response;
 
     }
 

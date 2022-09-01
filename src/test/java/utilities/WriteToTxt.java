@@ -145,9 +145,9 @@ public class WriteToTxt {
 
     public static void saveAppointmentIds(String fileName, List<Object> id) {
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName,false));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, false));
             for (int i = 0; i < id.size(); i++)
-                writer.append(id.get(i).toString()+",\n");
+                writer.append(id.get(i).toString() + ",\n");
 
 
             writer.close();
@@ -160,9 +160,9 @@ public class WriteToTxt {
     //tugba
     public static void saveAppointmentStatus(String fileName, List<Object> id) {
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName,false));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, false));
             for (int i = 0; i < id.size(); i++)
-                writer.append(id.get(i).toString()+",\n");
+                writer.append(id.get(i).toString() + ",\n");
 
 
             writer.close();
@@ -175,9 +175,9 @@ public class WriteToTxt {
     //tugba
     public static void saveAppointmentStartDate(String fileName, List<Object> id) {
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName,false));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, false));
             for (int i = 0; i < id.size(); i++)
-                writer.append(id.get(i).toString()+",\n");
+                writer.append(id.get(i).toString() + ",\n");
 
 
             writer.close();
@@ -190,9 +190,9 @@ public class WriteToTxt {
     //tugba
     public static void saveAppointmentEndDate(String fileName, List<Object> id) {
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName,false));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, false));
             for (int i = 0; i < id.size(); i++)
-                writer.append(id.get(i).toString()+",\n");
+                writer.append(id.get(i).toString() + ",\n");
 
 
             writer.close();
@@ -202,6 +202,20 @@ public class WriteToTxt {
         }
     }
 
+
+
+    public static void saveNameList(String fileName, List<Object> id) {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName,false));
+            for (int i = 0; i < id.size(); i++)
+                writer.append(id.get(i).toString()+",\n");
+
+            writer.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 
 

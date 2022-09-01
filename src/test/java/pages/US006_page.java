@@ -8,6 +8,7 @@ import utilities.Driver;
 public class US006_page {
 
     public US006_page(){
+
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
