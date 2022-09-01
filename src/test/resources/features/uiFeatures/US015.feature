@@ -13,6 +13,7 @@ Feature: Admin tarafından hasta oluşturma ve düzenleme
     Then Admin geçerli hasta bilgilerini girer.
     Then Admin Save butonuna tıklar ve A new Patient is created yazısını görüntüler.
     And Sayfayı kapatır
+    #
 
   @US15_TC02
   Scenario:Admin hasta bilgilerini görebilir.
